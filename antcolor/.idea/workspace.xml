@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="03954f19-c6aa-4b46-9698-16bc253e99f5" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AntWebColorQuantifier3.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AntWebColorQuantifier3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kibanacommands.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/kibanacommands.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SnakeMain.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Helpers/SnakeMain.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="28" selection-start-column="28" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SOMAntAverager.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SOMAntAverager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="13" column="86" selection-start-line="13" selection-start-column="86" selection-end-line="13" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AntWebFindHighValues.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AntWebFindHighValues.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="10" selection-start-column="10" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AntWebInferClimate.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AntWebInferClimate.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="69" selection-start-line="26" selection-start-column="69" selection-end-line="26" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AntWebInferMicrohabitat.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AntWebInferMicrohabitat.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="25" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>points</find>
+      <find>threshold</find>
+      <find>Snake</find>
+      <find>i</find>
+      <find>band</find>
+      <find>hsl</find>
+      <find>rgb_</find>
+      <find>snakeseg</find>
+      <find>snakes</find>
+      <find>np.</find>
+      <find>segmented</find>
+      <find>colorsys</find>
+      <find>50</find>
+      <find>open</find>
+      <find>snake</find>
+      <find>snakese</find>
+      <find>shape</find>
+      <find>progress</find>
+      <find>visualize</find>
+      <find>SP</find>
+      <find>SPEC</find>
+      <find>visual</find>
+      <find>print</find>
+      <find>j</find>
+      <find>j =</find>
+      <find>step</find>
+      <find>canny</find>
+      <find>string</find>
+      <find>extrac</find>
+      <find>SPE</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/DictQuery.py" />
+        <option value="$PROJECT_DIR$/elastictest.py" />
+        <option value="$PROJECT_DIR$/searchelastic.py" />
+        <option value="$PROJECT_DIR$/pheidolecolors.txt" />
+        <option value="$PROJECT_DIR$/anothertest.py" />
+        <option value="$PROJECT_DIR$/test4.py" />
+        <option value="$PROJECT_DIR$/colorShortcut.py" />
+        <option value="$PROJECT_DIR$/AntWebCOLORMATIC.py" />
+        <option value="$PROJECT_DIR$/AntWebColormatic2TheSqueakquel.py" />
+        <option value="$PROJECT_DIR$/test.txt" />
+        <option value="$PROJECT_DIR$/loadtoelastic.py" />
+        <option value="$PROJECT_DIR$/newload.py" />
+        <option value="$PROJECT_DIR$/imagetest.py" />
+        <option value="$PROJECT_DIR$/colorgramtest.py" />
+        <option value="$PROJECT_DIR$/colorthieftest.py" />
+        <option value="$PROJECT_DIR$/AntWebCOLORMATIC2TheSqueakquel2.py" />
+        <option value="$PROJECT_DIR$/Microhabitatter.py" />
+        <option value="$PROJECT_DIR$/KMeansColorExtractor.py" />
+        <option value="$PROJECT_DIR$/Kmeanstest.py" />
+        <option value="$PROJECT_DIR$/bounding box test.py" />
+        <option value="$PROJECT_DIR$/AntWebColormater2TheSqueakquel2ColorThief.py" />
+        <option value="$PROJECT_DIR$/loadToElastic.py" />
+        <option value="$PROJECT_DIR$/Watershed.py" />
+        <option value="$PROJECT_DIR$/snek.py" />
+        <option value="$PROJECT_DIR$/bound.py" />
+        <option value="$PROJECT_DIR$/AntWebCOLORMATIC2TheSqueakquel2ElectricAntaloo.py" />
+        <option value="$PROJECT_DIR$/graph.py" />
+        <option value="$PROJECT_DIR$/one&amp;donegraph.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/graphtest.py" />
+        <option value="$PROJECT_DIR$/CannySnakegraph.py" />
+        <option value="$PROJECT_DIR$/blah.py" />
+        <option value="$PROJECT_DIR$/astrotest.py" />
+        <option value="$PROJECT_DIR$/snakemain.py" />
+        <option value="$PROJECT_DIR$/snake.py" />
+        <option value="$PROJECT_DIR$/CannySnaker.py" />
+        <option value="$PROJECT_DIR$/AntWeb2Elastic.py" />
+        <option value="$PROJECT_DIR$/SnakeParameterTest.py" />
+        <option value="$PROJECT_DIR$/CannySnakeParameterTest.py" />
+        <option value="$PROJECT_DIR$/SnakeObj.py" />
+        <option value="$PROJECT_DIR$/AntWebInferHabitat.py" />
+        <option value="$PROJECT_DIR$/SnakeMain.py" />
+        <option value="$PROJECT_DIR$/AntWebInferMicrohabitat.py" />
+        <option value="$PROJECT_DIR$/AntWebInferClimate.py" />
+        <option value="$PROJECT_DIR$/AntWebFindHighValues.py" />
+        <option value="$PROJECT_DIR$/CudaTest.py" />
+        <option value="$PROJECT_DIR$/Helpers/SnakeMain.py" />
+        <option value="$PROJECT_DIR$/SOMAntAverager.py" />
+        <option value="$PROJECT_DIR$/AntWebColorQuantifier3.py" />
+        <option value="$PROJECT_DIR$/AntWebColorQuantifier3.py" />
+        <option value="$PROJECT_DIR$/kibanacommands.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="86" />
+    <option name="y" value="29" />
+    <option name="width" value="1229" />
+    <option name="height" value="1060" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="antcolor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="antcolor" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ToolWindowRun.ShowToolbar" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\OWNER\PycharmProjects\antcolor" />
+      <recent name="C:\Users\OWNER\PycharmProjects\antstuff" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\OWNER\PycharmProjects\antstuff" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.AntWebColorQuantifier3">
+    <configuration name="AntWebColorQuantifier3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="antcolor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AntWebColorQuantifier3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="AntWebFindHighValues" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="antcolor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AntWebFindHighValues.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="CannySnakeParameterTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="antcolor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CannySnakeParameterTest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="CudaTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="antcolor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CudaTest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="SOMAntAverager" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="antcolor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SOMAntAverager.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.AntWebColorQuantifier3" />
+      <item itemvalue="Python.CannySnakeParameterTest" />
+      <item itemvalue="Python.SOMAntAverager" />
+      <item itemvalue="Python.AntWebFindHighValues" />
+      <item itemvalue="Python.CudaTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.AntWebColorQuantifier3" />
+        <item itemvalue="Python.CudaTest" />
+        <item itemvalue="Python.AntWebFindHighValues" />
+        <item itemvalue="Python.SOMAntAverager" />
+        <item itemvalue="Python.CannySnakeParameterTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="03954f19-c6aa-4b46-9698-16bc253e99f5" name="Default" comment="" />
+      <created>1529526160018</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1529526160018</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="433" y="81" width="1229" height="1060" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09315746" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="R Packages" order="4" />
+      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.4016563" side_tool="true" weight="0.272051" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Python Console" order="8" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5983437" weight="0.2084656" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49913645" weight="0.3953241" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49952334" weight="0.33977273" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.09739583" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5983437" visible="true" weight="0.22335601" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49952334" weight="0.33977273" />
+      <window_info anchor="right" id="R Packages" order="4" />
+      <window_info anchor="bottom" id="Python Console" order="8" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49913645" weight="0.3953241" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.4016563" side_tool="true" weight="0.272051" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/highhead.jpg" />
+    <entry file="file://$PROJECT_DIR$/highbody1.jpg" />
+    <entry file="file://$PROJECT_DIR$/high1.jpg" />
+    <entry file="file://$PROJECT_DIR$/head6.jpg" />
+    <entry file="file://$PROJECT_DIR$/GraphMain.py" />
+    <entry file="file://$USER_HOME$/Desktop/image-segmentation-master/image-segmentation-master/README.md" />
+    <entry file="file://$USER_HOME$/Desktop/image-segmentation-master/image-segmentation-master/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/edges.jpg" />
+    <entry file="file://$PROJECT_DIR$/graph.py" />
+    <entry file="file://$PROJECT_DIR$/filter.py" />
+    <entry file="file://$PROJECT_DIR$/AntWebCOLORMATIC2TheSqueakquel2ElectricAntaloo.py" />
+    <entry file="file://$PROJECT_DIR$/polgon.jpg" />
+    <entry file="file://$PROJECT_DIR$/astrotest.py" />
+    <entry file="file://$PROJECT_DIR$/snek.py" />
+    <entry file="file://$PROJECT_DIR$/segment_graph.py" />
+    <entry file="file://$PROJECT_DIR$/one&amp;donegraph.py" />
+    <entry file="file://$PROJECT_DIR$/Microhabitatter.py" />
+    <entry file="file://$PROJECT_DIR$/smooth_filter.py" />
+    <entry file="file://$PROJECT_DIR$/bound.py" />
+    <entry file="file://$PROJECT_DIR$/bounding box test.py" />
+    <entry file="file://$PROJECT_DIR$/disjoint_set.py" />
+    <entry file="file://$PROJECT_DIR$/colorthieftest.py" />
+    <entry file="file://$PROJECT_DIR$/colorgramtest.py" />
+    <entry file="file://$PROJECT_DIR$/KMeansColorExtractor.py" />
+    <entry file="file://$PROJECT_DIR$/AntWebCOLORMATIC2TheSqueakquel2.py" />
+    <entry file="file://$PROJECT_DIR$/Kmeanstest.py" />
+    <entry file="file://$PROJECT_DIR$/CannySnakeTest.py" />
+    <entry file="file://$USER_HOME$/Desktop/Watershed.py" />
+    <entry file="file://$PROJECT_DIR$/AntWeb2Elastic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="6" column="93" selection-start-line="6" selection-start-column="93" selection-end-line="6" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/AntStuff/Old Files/AntWebCOLORMATIC2TheSqueakquel2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ants/AntWebCOLORMATIC2TheSqueakquel2ElectricAntaloo.py" />
+    <entry file="file://$PROJECT_DIR$/ants/head2.jpg" />
+    <entry file="file://$PROJECT_DIR$/ants/head3.jpg" />
+    <entry file="file://$PROJECT_DIR$/ants/head6.jpg" />
+    <entry file="file://$PROJECT_DIR$/ants/high1.jpg" />
+    <entry file="file://$PROJECT_DIR$/ants/head7.jpg" />
+    <entry file="file://$USER_HOME$/Desktop/AntStuff/Old Files/AntWebCOLORMATIC2TheSqueakquel2ElectricAntaloo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="51" column="20" lean-forward="true" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ants/head4.jpg" />
+    <entry file="file://$PROJECT_DIR$/SnakeMain.py" />
+    <entry file="file://$PROJECT_DIR$/SnakeObj.py" />
+    <entry file="file://$PROJECT_DIR$/CannySnakeParameterTest.py" />
+    <entry file="file://$PROJECT_DIR$/AntWebInferMicrohabitat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="25" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AntWebInferClimate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="69" selection-start-line="26" selection-start-column="69" selection-end-line="26" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CudaTest.py" />
+    <entry file="file://$PROJECT_DIR$/graphtest.py" />
+    <entry file="file://$PROJECT_DIR$/GraphMain.py" />
+    <entry file="file://$PROJECT_DIR$/SOMAntAverager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="13" column="86" selection-start-line="13" selection-start-column="86" selection-end-line="13" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Helpers/SnakeMain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AntWebFindHighValues.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AntWebColorQuantifier3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kibanacommands.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

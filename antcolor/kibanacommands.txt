@@ -1,0 +1,92 @@
+KIBANA COMMANDS
+Commands used in the Kibana console to deal with Elasticsearch, including necessary Elasticsearch mappings and settings
+
+GET /allants/_search 
+{ "size": 5000,
+  "query": {"match_all": {}}, "_source": ["microhabitat"]
+}
+
+PUT allants/_settings
+{
+  "index" : { "max_result_window" : 500000 }
+}
+
+DELETE allants
+GET allants/_mapping
+GET allants/_search 
+{
+  "query": { "match_all": {} }
+}
+
+The all important mapping is below!!
+PUT allants
+{
+ "mappings": {
+  "_doc": {
+     "properties": {
+  "antwebTaxonName": {"type": "keyword"},
+	"basisOfRecord": {"type": "text"},
+	"biogeographicregion": {"type": "keyword"},
+	"bioregion": {"type": "keyword"},
+	"caste": {"type": "keyword"},
+	"classVal": {"type": "keyword"},
+	"code": {"type": "keyword"},
+	"collectedby": {"type": "text"},
+	"collectionCode": {"type": "keyword"},
+	"country": {"type": "keyword"},
+	"dateCollected": {"type": "text"},
+	"dateCollectedEnd": {"type": "date", "ignore_malformed" : true},
+	"dateCollectedStart": {"type": "date", "ignore_malformed" : true},
+	"dateIdentified": {"type": "text"},
+	"dateDetermined": {"type": "date", "ignore_malformed" : true},
+	"decimalLatitude": {"type": "float"},
+	"decimalLongitude": {"type": "float"},
+	"family": {"type": "keyword"},
+	"fieldNotes": {"type": "text"},
+	"fieldNumber": {"type": "keyword"},
+	"fossil": {"type": "boolean"},
+	"genus": {"type": "keyword"},
+	"geo": {"properties": {"coordinates": {"type": "geo_point", "ignore_malformed" : true}}},
+	"georeferenceRemarks": {"type": "text"},
+	"habitat": {"type": "text"},
+	"habitats": {"type": "text"},
+	"identifiedBy": {"type": "text"},
+	"imageCount": {"type": "byte"},
+	"institutionCode": {"type": "keyword"},
+	"intraspecificEpithet": {"type": "keyword"},
+	"kingdom": {"type": "keyword"},
+	"locality": {"type": "text"},
+	"locatedat": {"type": "keyword"},
+	"locationRemark": {"type": "text"},
+	"microhabitat": {"type": "keyword"},
+	"minimumEleationInMeters": {"type": "integer"},
+	"museum": {"type": "keyword"},
+	"nomenclaturalCode": {"type": "keyword"},
+	"occurrenceId": {"type": "text"},
+	"occurrenceRemarks": {"type": "text"},
+	"order": {"type": "keyword"},
+	"ownedby": {"type": "keyword"},
+	"ownerInstitutionCode": {"type": "keyword"},
+	"phylum": {"type": "keyword"},
+	"preparations": {"type": "text"},
+	"recordedBy": {"type": "text"},
+	"samplingProtocol": {"type": "text"},
+	"scientificName": {"type": "keyword"},
+	"sex": {"type": "text"},
+	"specificEpithet": {"type": "keyword"},
+	"stateProvince": {"type": "keyword"},
+	"status": {"type": "keyword"},
+	"subfamily": {"type": "keyword"},
+	"subgenus": {"type": "keyword"},
+	"type": {"type": "text"},
+	"verbatimEventDate": {"type": "text"},
+	"microhabitatInferred": {"type": "keyword"},
+	"saturation": {"type": "float"},
+	"lightness": {"type": "float"},
+	"red": {"type": "integer"},
+	"green": {"type": "integer"},
+	"blue": {"type": "integer"}
+     }
+    }
+     }
+	}
