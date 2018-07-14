@@ -24,3 +24,5 @@ for s in dictspecimens:
     specimen = s['_source']
     id = s['_id']
     es.index(index='allants2', doc_type='_doc', id=id, body=specimen)
+
+    #low vegetation / above ground
