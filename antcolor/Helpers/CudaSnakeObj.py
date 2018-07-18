@@ -1,14 +1,15 @@
 import numpy as np
 import cv2
 import math
+from numba import vectorize, float32
 
-class SnakeObj:
+class CudaSnakeObj:
     """ A Snake class for active contour segmentation """
 
     # Constants
     MIN_DISTANCE_BETWEEN_POINTS = 5    # The minimum distance between two points to consider them overlaped
     MAX_DISTANCE_BETWEEN_POINTS = 50    # The maximum distance to insert another point into the spline
-    SEARCH_KERNEL_SIZE = 5              # The size of the search kernel. 7
+    SEARCH_KERNEL_SIZE = 7              # The size of the search kernel.
 
     # Members
     image = None        # The source image.
@@ -20,14 +21,14 @@ class SnakeObj:
     width = -1          # The image width.
     height = -1         # The image height.
     points = None       # The list of points of the snake.
-    n_starting_points = 17      # The number of starting points of the snake. 50 17
+    n_starting_points = 17      # The number of starting points of the snake. 50
     snake_length = 0    # The length of the snake (euclidean distances).
     closed = True       # Indicates if the snake is closed or open.
     alpha = .25       # The weight of the uniformity energy.
     beta = 1        # The weight of the curvature energy.
     delta = 0         # The weight of the user configured energy.
-    w_line = .25      # The weight to the line energy. .25
-    w_edge = .5        # The weight to the edge energy. .5
+    w_line = .25       # The weight to the line energy.
+    w_edge = .5        # The weight to the edge energy.
     w_term = .5        # The weight to the term energy.
     i = 0 #number of iterations
 
@@ -64,8 +65,8 @@ class SnakeObj:
 
         # Gets the half width and height of the image
         # to use as center of the generated snake circle
-        half_width = math.floor( self.width / 2 ) + 0
-        half_height = math.floor( self.height / 2 ) - 5
+        half_width = math.floor( self.width / 2 )
+        half_height = math.floor( self.height / 2 )
 
 
         ####################################
@@ -76,7 +77,7 @@ class SnakeObj:
         if self.closed:
             n = self.n_starting_points
             radius = half_width if half_width < half_height else half_height
-            radius = radius / 1.5 #my change
+            radius = radius / 2 #my change
             self.points = [ np.array([
                 half_width + math.floor( math.cos( 2 * math.pi / n * x ) * radius ),
                 half_height + math.floor( math.sin( 2 * math.pi / n * x ) * radius ) ])
@@ -117,18 +118,28 @@ class SnakeObj:
 
         return img
 
+    @vectorize(["float32(float32,float32,float32,float32)"], target='cuda')
+    def cudadist(a1,a2,b1,b2):
+        squared1 = (a2 - a1) * (a2 - a1)
+        squared2 = (b2 - b1) * (b2 - b1)
+        # print('good')
+        return(math.sqrt(squared1 + squared2))
 
-
-    def dist( a, b ):
+    def dist(a, b):
         """
         Calculates the euclidean distance between two points
         :param a: The first point
         :param b: The second point
         :return: The euclidian distance between the two points
         """
+        a1 = a[0]
+        a2 = a[1]
+        b1 = b[0]
+        b2 = b[1]
+        d = CudaSnakeObj.cudadist(a1,a2,b1,b2)
+        return(d)
 
-        return np.sqrt( np.sum( ( a - b ) ** 2 ) )
-
+        # return np.sqrt( np.sum( ( a - b ) ** 2 ) )
 
     def normalize( kernel ):
         """
@@ -137,10 +148,9 @@ class SnakeObj:
         :return: A copy of the kernel normalized
         """
 
+
         abs_sum = np.sum( [ abs( x ) for x in kernel ] )
         return kernel / abs_sum if abs_sum != 0 else kernel
-
-
 
     def get_length(self):
         """
@@ -152,7 +162,7 @@ class SnakeObj:
         if not self.closed:
             n_points -= 1
 
-        return np.sum( [ SnakeObj.dist( self.points[i], self.points[ (i+1)%n_points  ] ) for i in range( 0, n_points ) ] )
+        return np.sum( [ CudaSnakeObj.dist( self.points[i], self.points[ (i+1)%n_points  ] ) for i in range( 0, n_points ) ] )
 
 
 
@@ -166,12 +176,16 @@ class SnakeObj:
         # The average distance between points in the snake
         avg_dist = self.snake_length / len( self.points )
         # The distance between the previous and the point being analysed
-        un = SnakeObj.dist( prev, p )
+        un = CudaSnakeObj.dist( prev, p )
 
         dun = abs( un - avg_dist )
 
         return dun**2
 
+    @vectorize(["float32(float32,float32)"], target='cuda')
+    def cudacurve(a, b):
+        o = (math.sqrt(math.pow(a,2) + math.pow(b,2)))
+        return o
 
     def f_curvature( self, p, prev, next ):
         """
@@ -183,11 +197,11 @@ class SnakeObj:
         """
         ux = p[0] - prev[0]
         uy = p[1] - prev[1]
-        un = math.sqrt( ux**2 + uy**2 )
+        un = CudaSnakeObj.cudacurve(ux, uy)
 
         vx = p[0] - next[0]
         vy = p[1] - next[1]
-        vn = math.sqrt( vx**2 + vy**2 )
+        vn = CudaSnakeObj.cudacurve(vx, vy)
 
         if un == 0 or vn == 0:
             return 0
@@ -196,7 +210,7 @@ class SnakeObj:
         cy = float( vy + uy ) / ( un * vn )
 
         cn = cx**2 + cy**2
-
+        # print('ok')
         return cn
 
 
@@ -271,7 +285,7 @@ class SnakeObj:
                 curr = self.points[ i ]
                 end = self.points[ j ]
 
-                dist = SnakeObj.dist( curr, end )
+                dist = CudaSnakeObj.dist( curr, end )
 
                 if dist < self.MIN_DISTANCE_BETWEEN_POINTS:
                     remove_indexes = range( i+1, j ) if (i!=0 and j!=snake_size-1) else [j]
@@ -300,7 +314,7 @@ class SnakeObj:
             next = self.points[ (i+1) % snake_size ]
             next2 = self.points[ (i+2) % snake_size ]
 
-            if SnakeObj.dist( curr, next ) > self.MAX_DISTANCE_BETWEEN_POINTS:
+            if CudaSnakeObj.dist( curr, next ) > self.MAX_DISTANCE_BETWEEN_POINTS:
                 # Pre-computed uniform cubig b-spline for t = 0.5
                 c0 = 0.125 / 6.0
                 c1 = 2.875 / 6.0
@@ -343,6 +357,7 @@ class SnakeObj:
             prev = self.points[ ( i + len( self.points )-1 ) % len( self.points ) ]
             next = self.points[ ( i + 1 ) % len( self.points ) ]
 
+
             for dx in range( -hks, hks ):
                 for dy in range( -hks, hks ):
                     p = np.array( [curr[0] + dx, curr[1] + dy] )
@@ -357,14 +372,15 @@ class SnakeObj:
 
 
             # Normalizes energies
-            e_uniformity = SnakeObj.normalize( e_uniformity )
-            e_curvature = SnakeObj.normalize( e_curvature )
-            e_line = SnakeObj.normalize( e_line )
-            e_edge = SnakeObj.normalize( e_edge )
-            e_term = SnakeObj.normalize( e_term )
-            e_conf = SnakeObj.normalize( e_conf )
+            e_uniformity = CudaSnakeObj.normalize( e_uniformity )
+            e_curvature = CudaSnakeObj.normalize( e_curvature )
+            e_line = CudaSnakeObj.normalize( e_line )
+            e_edge = CudaSnakeObj.normalize( e_edge )
+            e_term = CudaSnakeObj.normalize( e_term )
+            e_conf = CudaSnakeObj.normalize( e_conf )
 
-            #EXPENSIVE OPERATIONS- f function loop, especially linear
+
+
             # The sum of all energies for each point
 
             e_sum = self.alpha * e_uniformity \
@@ -402,6 +418,7 @@ class SnakeObj:
         # add missing points
         self.remove_overlaping_points()
         self.add_missing_points()
+        # print(self.points)
         return changed
 
 

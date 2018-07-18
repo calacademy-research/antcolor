@@ -44,7 +44,7 @@ class SnakeMain(object):
             # Stops looping when ESC pressed
             k = cv2.waitKey(33)
             self.points = snake.points
-            if self.progress > 25:
+            if self.progress > 10:
                 break
 
 

@@ -10,7 +10,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from Helpers import SnakeMain
 from matplotlib.path import Path
+from timeit import default_timer as timer
 import imghdr
+
 
 ####################################################################################################################################################################################################
 ####### AntWebColorQuantifier3 adds rgb, hsl and hsv color data to AntWeb specimens in Elasticsearch. Requires proper mapping and specimen data in the requested Elasticsearch index ###########
@@ -46,7 +48,7 @@ def snakesegment(image,visualizebool): #function to segment using the included s
     snakecharmer.load_image(file_to_load=edged,visualizebool=visualizebool)
 
     # while specified number of iterations not completed...
-    while(snakecharmer.progress < 25):
+    while(snakecharmer.progress < 10):
         pass
 
     #get contour points from the finished snake
@@ -101,11 +103,12 @@ def saturationthreshsegment(image,visualizebool): #assumes that ants possess mor
 #### END OF FUNCTIONS
 ########################
 
-visualize = True #set whether to visualize the image transformations
+visualize = False #set whether to visualize the image transformations
+bulk = True #set whether to index new values one at a time as they are discovered or in bulk once discovery is finished
 
 #query specimens from your elasticsearch
 es = Elasticsearch()
-r = es.search(index='allants2', doc_type='_doc', body={'from': 14000, 'size': 100, 'query': {'match_all': {}}})
+r = es.search(index='allants3', doc_type='_doc', body={'from': 20000, 'size': 5000, 'query': {'match_all': {}}})
 # print(r['hits'])
 dictspecimens = r['hits']['hits']
 
@@ -146,7 +149,10 @@ for specimen in dictspecimens:
 
             # check for greyscale (SEM images) which would mess everything up
             if(len(imgarr.shape) == 3):
+
+                start = timer()
                 segmented = snakesegment(image=img,visualizebool=visualize)
+                print('Segment time:' + str(timer() - start))
                 allred = []
                 allgreen = []
                 allblue = []
@@ -179,6 +185,7 @@ for specimen in dictspecimens:
                     total+=1
                     print('Extracted: ' + str(extracted)) #the number of specimens with properly extracted colors
                     print('Total: ' + str(total)) #the total number of specimens analyzed
+                    print('Total time:' + str(timer() - start))
 
     if lightness == 0:
         lightness = None
@@ -203,6 +210,7 @@ for specimen in dictspecimens:
     # s = specimen['_source']
     # id = specimen['_id']
     # es.index(index='allants2', doc_type='_doc', id=id, body=s)
+
 
 for s in dictspecimens:
     specimen = s['_source']

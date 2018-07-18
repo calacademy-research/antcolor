@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e2ac741-a111-4fa1-aceb-38b7b960c985" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/antcolor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/antcolor.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/antcolor/GeographicRGBColormap.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/antcolor/proportionalmap.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/antcolor/AntWebInferMicrohabitat.py" beforeDir="false" afterPath="$PROJECT_DIR$/antcolor/AntWebInferMicrohabitat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/antcolor/AntWeb2Elastic.py" beforeDir="false" afterPath="$PROJECT_DIR$/antcolor/AntWeb2Elastic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/antcolor/AntWebColorQuantifier3.py" beforeDir="false" afterPath="$PROJECT_DIR$/antcolor/AntWebColorQuantifier3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/antcolor/Helpers/SnakeMain.py" beforeDir="false" afterPath="$PROJECT_DIR$/antcolor/Helpers/SnakeMain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/antcolor/Helpers/SnakeObj.py" beforeDir="false" afterPath="$PROJECT_DIR$/antcolor/Helpers/SnakeObj.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,11 +19,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AntWebFindHighValues.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/antcolor/AntWebFindHighValues.py">
+      <file leaf-file-name="SnakeObj.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/antcolor/Helpers/SnakeObj.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="1224">
+              <caret line="78" column="33" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AntWeb2Elastic.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/antcolor/AntWeb2Elastic.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="80" selection-start-line="6" selection-start-column="80" selection-end-line="6" selection-end-column="80" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -27,36 +43,54 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RGBPointCloud2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/antcolor/RGBPointCloud2.py">
+      <file leaf-file-name="AntWebInferClimate.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/antcolor/AntWebInferClimate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AntWebInferMicrohabitat.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/antcolor/AntWebInferMicrohabitat.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="20" column="53" lean-forward="true" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AntWebColorQuantifier3.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AntWebColorQuantifier3.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/antcolor/AntWebColorQuantifier3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="70">
+              <caret line="23" column="15" selection-start-line="22" selection-start-column="20" selection-end-line="24" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CannySnakeTest.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/antcolor/Tests/CannySnakeTest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GeographicRGBColormap.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/antcolor/GeographicRGBColormap.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="52" column="30" lean-forward="true" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="proportionalmap.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/antcolor/proportionalmap.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -67,6 +101,43 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>start =</find>
+      <find>f_un</find>
+      <find>gradient</find>
+      <find>source</find>
+      <find>5</find>
+      <find>6</find>
+      <find>7</find>
+      <find>cudas</find>
+      <find>f_</find>
+      <find>f_unif</find>
+      <find>unif</find>
+      <find>unifor</find>
+      <find>SnakeOb</find>
+      <find>snake</find>
+      <find>visu</find>
+      <find>visualize</find>
+      <find>progress</find>
+      <find>good</find>
+      <find>width</find>
+      <find>math.floor</find>
+      <find>print</find>
+      <find>time</find>
+      <find>visualize =</find>
+      <find>Image</find>
+      <find>array</find>
+      <find>light</find>
+      <find>show</find>
+      <find>map</find>
+      <find>Y</find>
+      <find>X</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,14 +151,22 @@
         <option value="$PROJECT_DIR$/antcolor/RGBPointCloud.py" />
         <option value="$PROJECT_DIR$/antcolor/AntWebInferMicrohabitat.py" />
         <option value="$PROJECT_DIR$/antcolor/RGBPointCloud2.py" />
+        <option value="$PROJECT_DIR$/antcolor/Tests/CudaTest.py" />
+        <option value="$PROJECT_DIR$/antcolor/Helpers/CudaSnakeObj.py" />
+        <option value="$PROJECT_DIR$/antcolor/Helpers/SnakeMain.py" />
+        <option value="$PROJECT_DIR$/antcolor/Helpers/SnakeObj.py" />
+        <option value="S:/Databases/pybioclim-master/pybioclim-master/setup.py" />
+        <option value="$PROJECT_DIR$/antcolor/AntWeb2Elastic.py" />
+        <option value="$PROJECT_DIR$/antcolor/AntWebInferClimate.py" />
+        <option value="$PROJECT_DIR$/antcolor/AntWebColorQuantifier3.py" />
+        <option value="$PROJECT_DIR$/antcolor/GeographicRGBColormap.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="43" />
-    <option name="y" value="113" />
-    <option name="width" value="1816" />
-    <option name="height" value="879" />
+    <option name="x" value="-1808" />
+    <option name="width" value="1505" />
+    <option name="height" value="1136" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -97,6 +176,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -104,20 +184,37 @@
               <item name="antcolor" type="b2602c69:ProjectViewProjectNode" />
               <item name="antcolor" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="antcolor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="antcolor" type="462c0819:PsiDirectoryNode" />
+              <item name="Tests" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/antcolor" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="antcolor" is-module-sdk="true" working-directory="$PROJECT_DIR$/antcolor">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="antcolor" />
+        <option name="myWorkingDirectory" value="$PROJECT_DIR$/antcolor" />
+      </console-settings>
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="S:\GitProjects\antcolor\antcolor" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="S:\GitProjects\antcolor\antcolor" />
+      <recent name="S:\GitProjects\antcolor\antcolor\Helpers" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -132,8 +229,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.RGBPointCloud2">
-    <configuration name="AntWebFindHighValues" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.GeographicRGBColormap">
+    <configuration name="AntWeb2Elastic" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="antcolor" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -145,13 +242,13 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/antcolor/AntWebFindHighValues.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/antcolor/AntWeb2Elastic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="RGBPointCloud" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="AntWebColorQuantifier3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="antcolor" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -163,13 +260,13 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/antcolor/RGBPointCloud.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/antcolor/AntWebColorQuantifier3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="RGBPointCloud2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="CudaTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="antcolor" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -177,17 +274,17 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/antcolor" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/antcolor/Tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/antcolor/RGBPointCloud2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/antcolor/Tests/CudaTest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="GeographicRGBColormap" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="antcolor" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -199,13 +296,13 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/antcolor/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/antcolor/GeographicRGBColormap.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="triangletest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="SnakeMain" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="antcolor" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -213,30 +310,30 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/antcolor" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/antcolor/Helpers" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/antcolor/triangletest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/antcolor/Helpers/SnakeMain.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.AntWebFindHighValues" />
-      <item itemvalue="Python.test" />
-      <item itemvalue="Python.RGBPointCloud" />
-      <item itemvalue="Python.triangletest" />
-      <item itemvalue="Python.RGBPointCloud2" />
+      <item itemvalue="Python.CudaTest" />
+      <item itemvalue="Python.AntWebColorQuantifier3" />
+      <item itemvalue="Python.SnakeMain" />
+      <item itemvalue="Python.AntWeb2Elastic" />
+      <item itemvalue="Python.GeographicRGBColormap" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.RGBPointCloud2" />
-        <item itemvalue="Python.RGBPointCloud" />
-        <item itemvalue="Python.triangletest" />
-        <item itemvalue="Python.AntWebFindHighValues" />
-        <item itemvalue="Python.test" />
+        <item itemvalue="Python.GeographicRGBColormap" />
+        <item itemvalue="Python.AntWebColorQuantifier3" />
+        <item itemvalue="Python.AntWeb2Elastic" />
+        <item itemvalue="Python.SnakeMain" />
+        <item itemvalue="Python.CudaTest" />
       </list>
     </recent_temporary>
   </component>
@@ -251,24 +348,32 @@
       <option name="presentableId" value="Default" />
       <updated>1531503226524</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added script to generate RGB point cloud for ant color using matplotlib">
+      <created>1531526774614</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1531526774614</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="121" y="126" width="1816" height="879" extended-state="0" />
+    <frame x="-1808" y="0" width="1505" height="1136" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16833334" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20349228" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="R Packages" order="3" />
       <window_info anchor="right" id="R Graphics" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2303665" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.37022528" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -280,29 +385,229 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16833334" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="R Graphics" order="3" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2309322" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="R Packages" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Python Console" order="10" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added script to generate RGB point cloud for ant color using matplotlib" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added script to generate RGB point cloud for ant color using matplotlib" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/antcolor/Helpers/CudaSnakeObj.py</url>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/antcolor/Helpers/SnakeObj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5440">
+          <caret line="327" column="22" selection-start-line="327" selection-start-column="18" selection-end-line="327" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/Helpers/CudaSnakeObj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2482">
+          <caret line="156" selection-start-line="156" selection-end-line="156" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/Helpers/SnakeMain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="41" column="38" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/AntWebColorQuantifier3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="103" column="17" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/AntWebFindHighValues.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/RGBPointCloud2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/AntWebInferMicrohabitat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/Tests/CudaTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="19" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/Helpers/SnakeObj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5440">
+          <caret line="327" column="22" selection-start-line="327" selection-start-column="18" selection-end-line="327" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/Helpers/CudaSnakeObj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2482">
+          <caret line="156" lean-forward="true" selection-start-line="156" selection-end-line="156" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/Helpers/SnakeMain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="41" column="38" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/AntWebColorQuantifier3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="103" column="17" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/AntWebFindHighValues.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/RGBPointCloud2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/AntWebColorQuantifier3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/AntWebInferMicrohabitat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/AntWebFindHighValues.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/RGBPointCloud2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/AntWebColorQuantifier3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/AntWebInferMicrohabitat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="58" lean-forward="true" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/antcolor/AntWebFindHighValues.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -362,48 +667,26 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/antcolor/test.py" />
-    <entry file="file://$PROJECT_DIR$/antcolor/triangletest.py">
+    <entry file="file://$PROJECT_DIR$/antcolor/triangletest.py" />
+    <entry file="file://$PROJECT_DIR$/antcolor/Open3dtest.py" />
+    <entry file="file://$PROJECT_DIR$/antcolor/RGBPointCloud.py" />
+    <entry file="file://$PROJECT_DIR$/antcolor/RStuff.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="374">
+          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/antcolor/Open3dtest.py">
+    <entry file="file://$PROJECT_DIR$/antcolor/AntWebInferMicrohabitat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/antcolor/AntWebColorQuantifier3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/antcolor/RGBPointCloud.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="17" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/antcolor/AntWebFindHighValues.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="85">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
@@ -411,20 +694,145 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/Tests/CudaTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/antcolor/RGBPointCloud2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
-          <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/antcolor/AntWebInferMicrohabitat.py">
+    <entry file="file://$PROJECT_DIR$/antcolor/Helpers/CudaSnakeObj.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="20" column="53" lean-forward="true" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+        <state relative-caret-position="391">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/Helpers/SnakeMain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://S:/Databases/pybioclim-master/pybioclim-master/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="63" column="9" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://S:/Databases/pybioclim-master/pybioclim-master/src/get_values.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://S:/Databases/pybioclim-master/pybioclim-master/src/map_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://S:/Databases/pybioclim-master/pybioclim-master/src/read_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-799">
+          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://S:/Databases/pybioclim-master/pybioclim-master/src/__main__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://S:/Databases/pybioclim-master/pybioclim-master/src/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/Helpers/SnakeObj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="78" column="33" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/proportionalmap.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/Tests/CannySnakeTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/AntWebInferClimate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/AntWeb2Elastic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="80" selection-start-line="6" selection-start-column="80" selection-end-line="6" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/GeographicRGBColormap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="52" column="30" lean-forward="true" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/AntWebColorQuantifier3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="23" column="15" selection-start-line="22" selection-start-column="20" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
