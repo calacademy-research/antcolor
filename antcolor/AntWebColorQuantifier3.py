@@ -103,13 +103,15 @@ def saturationthreshsegment(image,visualizebool): #assumes that ants possess mor
 #### END OF FUNCTIONS
 ########################
 
+myindex = 'allants4'
+lastAnalyzed = 44194 #Start at 1 for first run. Set to last analyzed for subsequent runs
 visualize = False #set whether to visualize the image transformations
-bulk = True #set whether to index new values one at a time as they are discovered or in bulk once discovery is finished
+bulk = False #set whether to index new values one at a time as they are discovered or in bulk once discovery is finished
 
 #query specimens from your elasticsearch
 es = Elasticsearch()
-r = es.search(index='allants3', doc_type='_doc', body={'from': 20000, 'size': 5000, 'query': {'match_all': {}}})
-# print(r['hits'])
+r = es.search(index=myindex, doc_type='_doc', body={"sort": [{"sortingid": {"order": "asc"}}, "_score"], 'from': (lastAnalyzed - 1), 'size': 10000, 'query': {'match_all': {}}}) #20000-25000 missing?
+# print(r['hits']) #34647
 dictspecimens = r['hits']['hits']
 
 #for every specimen...
@@ -184,14 +186,14 @@ for specimen in dictspecimens:
                     extracted+=1
                     total+=1
                     print('Extracted: ' + str(extracted)) #the number of specimens with properly extracted colors
-                    print('Total: ' + str(total)) #the total number of specimens analyzed
+                    # print('Total: ' + str(total)) #the total number of specimens analyzed
                     print('Total time:' + str(timer() - start))
 
     if lightness == 0:
         lightness = None
         total+=1
         print('SPECIMEN SKIPPED')
-        print(c) #code of skipped specimen
+        # print(c) #code of skipped specimen
 
     if red == 0:
         red = None
@@ -207,14 +209,18 @@ for specimen in dictspecimens:
     specimen['_source']['red'] = red;
     specimen['_source']['green'] = green;
     specimen['_source']['blue'] = blue;
-    # s = specimen['_source']
-    # id = specimen['_id']
-    # es.index(index='allants2', doc_type='_doc', id=id, body=s)
+    s = specimen['_source']
+    i = specimen['_id']
+    sortingi = specimen['_source']['sortingid']
+    if(not bulk):
+        es.index(index=myindex, doc_type='_doc', id=i, body=s)
+        print('Last Sorting ID: ' + str(sortingi))
 
 
-for s in dictspecimens:
-    specimen = s['_source']
-    id = s['_id']
-    es.index(index='allants2', doc_type='_doc', id=id, body=specimen)
+if(bulk):
+    for s in dictspecimens:
+        specimen = s['_source']
+        id = s['_id']
+        es.index(index=myindex, doc_type='_doc', id=id, body=specimen)
 
 #previous version- AntWebColormatic2ElectricAntaloo

@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e2ac741-a111-4fa1-aceb-38b7b960c985" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/antcolor/GeographicRGBColormap.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/antcolor/proportionalmap.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/antcolor/AntWeb2Elastic.py" beforeDir="false" afterPath="$PROJECT_DIR$/antcolor/AntWeb2Elastic.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/antcolor/AntWebColorQuantifier3.py" beforeDir="false" afterPath="$PROJECT_DIR$/antcolor/AntWebColorQuantifier3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/antcolor/Helpers/SnakeMain.py" beforeDir="false" afterPath="$PROJECT_DIR$/antcolor/Helpers/SnakeMain.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/antcolor/Helpers/SnakeObj.py" beforeDir="false" afterPath="$PROJECT_DIR$/antcolor/Helpers/SnakeObj.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/antcolor/AntWebFindHighValues.py" beforeDir="false" afterPath="$PROJECT_DIR$/antcolor/AntWebFindHighValues.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/antcolor/GeographicRGBColormap.py" beforeDir="false" afterPath="$PROJECT_DIR$/antcolor/GeographicRGBColormap.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/antcolor/OldRStuff.R" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,7 +21,7 @@
       <file leaf-file-name="SnakeObj.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/antcolor/Helpers/SnakeObj.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
+            <state relative-caret-position="1292">
               <caret line="78" column="33" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -34,8 +33,8 @@
       <file leaf-file-name="AntWeb2Elastic.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/antcolor/AntWeb2Elastic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="80" selection-start-line="6" selection-start-column="80" selection-end-line="6" selection-end-column="80" />
+            <state relative-caret-position="85">
+              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -47,16 +46,16 @@
         <entry file="file://$PROJECT_DIR$/antcolor/AntWebInferClimate.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+              <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AntWebColorQuantifier3.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AntWebColorQuantifier3.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/antcolor/AntWebColorQuantifier3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="23" column="15" selection-start-line="22" selection-start-column="20" selection-end-line="24" />
+            <state>
+              <caret selection-end-line="13" selection-end-column="13" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -64,10 +63,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="AntWebFindHighValues.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/antcolor/AntWebFindHighValues.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CannySnakeTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/antcolor/Tests/CannySnakeTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="68">
               <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="29" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -76,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeographicRGBColormap.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GeographicRGBColormap.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/antcolor/GeographicRGBColormap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="52" column="30" lean-forward="true" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+            <state relative-caret-position="86">
+              <caret line="53" column="22" lean-forward="true" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -104,14 +112,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>start =</find>
-      <find>f_un</find>
-      <find>gradient</find>
-      <find>source</find>
-      <find>5</find>
-      <find>6</find>
-      <find>7</find>
-      <find>cudas</find>
       <find>f_</find>
       <find>f_unif</find>
       <find>unif</find>
@@ -126,13 +126,21 @@
       <find>math.floor</find>
       <find>print</find>
       <find>time</find>
-      <find>visualize =</find>
+      <find />
       <find>Image</find>
       <find>array</find>
       <find>light</find>
       <find>show</find>
       <find>map</find>
       <find>Y</find>
+      <find>bulk</find>
+      <find>allants</find>
+      <find>index</find>
+      <find>id</find>
+      <find>source</find>
+      <find>last</find>
+      <find>L</find>
+      <find>ECH</find>
       <find>X</find>
     </findStrings>
     <replaceStrings>
@@ -156,17 +164,20 @@
         <option value="$PROJECT_DIR$/antcolor/Helpers/SnakeMain.py" />
         <option value="$PROJECT_DIR$/antcolor/Helpers/SnakeObj.py" />
         <option value="S:/Databases/pybioclim-master/pybioclim-master/setup.py" />
-        <option value="$PROJECT_DIR$/antcolor/AntWeb2Elastic.py" />
         <option value="$PROJECT_DIR$/antcolor/AntWebInferClimate.py" />
+        <option value="$PROJECT_DIR$/antcolor/AntWeb2Elastic.py" />
         <option value="$PROJECT_DIR$/antcolor/AntWebColorQuantifier3.py" />
+        <option value="$PROJECT_DIR$/antcolor/AntWebFindHighValues.py" />
+        <option value="$PROJECT_DIR$/antcolor/SubsetElasticSpecimens.py" />
         <option value="$PROJECT_DIR$/antcolor/GeographicRGBColormap.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-1808" />
-    <option name="width" value="1505" />
-    <option name="height" value="1136" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="-1580" />
+    <option name="y" value="189" />
+    <option name="width" value="1378" />
+    <option name="height" value="979" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -266,7 +277,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="CudaTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="AntWebFindHighValues" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="antcolor" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -274,11 +285,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/antcolor/Tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/antcolor" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/antcolor/Tests/CudaTest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/antcolor/AntWebFindHighValues.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -321,19 +332,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.CudaTest" />
       <item itemvalue="Python.AntWebColorQuantifier3" />
       <item itemvalue="Python.SnakeMain" />
       <item itemvalue="Python.AntWeb2Elastic" />
       <item itemvalue="Python.GeographicRGBColormap" />
+      <item itemvalue="Python.AntWebFindHighValues" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.GeographicRGBColormap" />
+        <item itemvalue="Python.AntWebFindHighValues" />
         <item itemvalue="Python.AntWebColorQuantifier3" />
         <item itemvalue="Python.AntWeb2Elastic" />
         <item itemvalue="Python.SnakeMain" />
-        <item itemvalue="Python.CudaTest" />
       </list>
     </recent_temporary>
   </component>
@@ -359,17 +370,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1808" y="0" width="1505" height="1136" extended-state="0" />
-    <editor active="true" />
+    <frame x="-1580" y="189" width="1378" height="979" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20349228" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15051395" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="R Packages" order="3" />
       <window_info anchor="right" id="R Graphics" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.24669604" side_tool="true" visible="true" weight="0.31712964" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.37022528" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.75330395" visible="true" weight="0.31712964" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -383,25 +393,25 @@
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16833334" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20349228" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="R Graphics" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2309322" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37022528" />
       <window_info anchor="right" id="R Packages" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="8" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -422,16 +432,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/antcolor/Helpers/SnakeObj.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5440">
-          <caret line="327" column="22" selection-start-line="327" selection-start-column="18" selection-end-line="327" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/antcolor/Helpers/CudaSnakeObj.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2482">
@@ -446,9 +446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
           <caret line="41" column="38" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -466,9 +463,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -476,9 +470,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -520,9 +511,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
           <caret line="41" column="38" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -540,9 +528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -550,9 +535,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -576,9 +558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -586,9 +565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -612,9 +588,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -631,9 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -651,9 +621,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -670,27 +637,11 @@
     <entry file="file://$PROJECT_DIR$/antcolor/triangletest.py" />
     <entry file="file://$PROJECT_DIR$/antcolor/Open3dtest.py" />
     <entry file="file://$PROJECT_DIR$/antcolor/RGBPointCloud.py" />
-    <entry file="file://$PROJECT_DIR$/antcolor/RStuff.R">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/RStuff.R" />
     <entry file="file://$PROJECT_DIR$/antcolor/AntWebInferMicrohabitat.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/antcolor/AntWebFindHighValues.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -705,9 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -725,9 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -763,9 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -778,7 +720,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/antcolor/Helpers/SnakeObj.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
+        <state relative-caret-position="1292">
           <caret line="78" column="33" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -791,7 +733,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/antcolor/Tests/CannySnakeTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="68">
           <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="29" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -799,39 +741,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/antcolor/AntWebInferClimate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/antcolor/AntWeb2Elastic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="80" selection-start-line="6" selection-start-column="80" selection-end-line="6" selection-end-column="80" />
+        <state relative-caret-position="85">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/antcolor/GeographicRGBColormap.py">
+    <entry file="file://$PROJECT_DIR$/antcolor/AntWebInferClimate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="52" column="30" lean-forward="true" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="102">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/antcolor/AntWebColorQuantifier3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="23" column="15" selection-start-line="22" selection-start-column="20" selection-end-line="24" />
+        <state>
+          <caret selection-end-line="13" selection-end-column="13" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/SubsetElasticSpecimens.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/AntWebFindHighValues.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/GeographicRGBColormap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="53" column="22" lean-forward="true" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>

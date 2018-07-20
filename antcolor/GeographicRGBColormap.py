@@ -16,12 +16,15 @@ specimenset = []
 total = 0
 for specimen in dictspecimens:
     # if has RGB and has geo location
-    # print(specimen)
     if((specimen['_source']['decimalLatitude'] != None) and (specimen['_source']['lightness'] != None)):
         lat = specimen['_source']['decimalLatitude']
+        print("Lat: " + str(lat))
         latpixel = 90 - int(lat) #pixely = 90-latitude
+        print("LatPix: " + str(latpixel))
         lon = specimen['_source']['decimalLongitude']
+        print("Lon: " + str(lon))
         lonpixel = lon + 180
+        print("LonPix: " + str(lonpixel))
         red = specimen['_source']['red']
         green = specimen['_source']['green']
         blue = specimen['_source']['blue']
@@ -30,15 +33,17 @@ for specimen in dictspecimens:
 
 mapimg = Image.open('proportionalmap.png')
 maparr = np.array(mapimg)
+print("ECH")
+print(maparr.shape)
 
 x = 0
 y = 0
-for xcoord in maparr:
-    for ycoord in xcoord:
+for xcoord in maparr: #180
+    for ycoord in xcoord: #360
         specsinradius = []
         for spec in specimenset:
-            specx = spec[0]
-            specy = spec[1]
+            specx = spec[0] #lat pixel
+            specy = spec[1] #lon pixel
             if((abs(x - specy) < radius) and (abs(y - specx) < radius)):
                 specsinradius.append(spec)
         print(specsinradius)
@@ -56,9 +61,9 @@ for xcoord in maparr:
             avgr = totalr / len(specsinradius)
             avgg = totalg / len(specsinradius)
             avgb = totalb / len(specsinradius)
-            maparr[y][x][0] = avgb
-            maparr[y][x][1] = avgg
-            maparr[y][x][2] = avgr
+            maparr[x][y][0] = avgb
+            maparr[x][y][1] = avgg
+            maparr[x][y][2] = avgr
             print(maparr)
         y+=1
         print('Y ' + str(y))

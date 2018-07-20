@@ -3,7 +3,7 @@ import requests
 import json
 
 es = Elasticsearch()
-r = es.search(index='allants2', doc_type='_doc', body={'from': 0, 'size': 50, 'query': {'match_all': {}}, 'sort': [{"saturation": {"order": "asc"}}]})
+r = es.search(index='allants2', doc_type='_doc', body={'from': 0, 'size': 50, 'query': {'match_all': {}}, 'sort': [{"lightness": {"order": "desc"}}]})
 dictspecimens = r['hits']['hits']
 
 #for every specimen...
