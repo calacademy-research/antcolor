@@ -12,11 +12,84 @@ from Helpers import SnakeMain
 from matplotlib.path import Path
 from timeit import default_timer as timer
 import imghdr
+from skimage.segmentation import active_contour
+from skimage import img_as_float
 
 
 ####################################################################################################################################################################################################
 ####### AntWebColorQuantifier3 adds rgb, hsl and hsv color data to AntWeb specimens in Elasticsearch. Requires proper mapping and specimen data in the requested Elasticsearch index ###########
 ####################################################################################################################################################################################################
+
+def scisnakesegment(image,visualizebool): #function to segment using the included snake (active contour) algorithm after applying the canny algorithm to find edges
+
+    #get edges with cv2's canny algorithm
+    img = image
+    imgarr = np.array(img)
+    if(visualizebool):
+        imgvis = imgarr[:, :, ::-1].copy()  # convert from RGB to BGR
+        cv2.imshow('Input Image',imgvis)
+        cv2.waitKey()
+    contrasted = ImageEnhance.Contrast(img).enhance(2)
+    contrastedarr = np.array(contrasted)
+    contrastedarr = contrastedarr[:, :, ::-1].copy()  # convert from RGB to BGR
+    if(visualizebool):
+        cv2.imshow('Contrasted Image', contrastedarr)
+        cv2.waitKey()
+    greyscaled = cv2.cvtColor(contrastedarr, cv2.COLOR_BGR2GRAY)
+    filtered = cv2.bilateralFilter(greyscaled, 6, 50, 50)
+    if (visualizebool):
+        cv2.imshow('Bilaterally Filtered Image', contrastedarr)
+        cv2.waitKey()
+    edged = cv2.Canny(filtered, 125, 250) #100, 225
+    if(visualizebool):
+        cv2.imshow('Image Edges with Canny', edged)
+        cv2.waitKey()
+
+    forsnake = img_as_float(edged)
+
+    # apply the snake algorithm from the skimage package
+    height = forsnake.shape[0]
+    width = forsnake.shape[1]
+    sdiameter = height * 0.6
+
+    s = np.linspace(0, 2 * np.pi, sdiameter)
+    x = width / 2 + sdiameter * np.cos(s)
+    y = height / 2 - (height / 20) + sdiameter * np.sin(s) * (height / width)
+    init = np.array([x, y]).T
+    snake = active_contour(img, init, alpha=0.15, beta=1, gamma=0.05, w_line=0.1, w_edge=1)
+    #snake = active_contour(forsnake, init, alpha=0.1, beta=5, gamma=0.004, w_line=0.1, w_edge=1, convergence=1)
+    contours = np.asarray(snake)
+
+    width = img.width
+    height = img.height
+
+    #visualize contour points
+    if(visualizebool):
+        x, y = contours.T
+        plt.scatter(x, y)
+        plt.ylim(0, height)
+        plt.xlim(0, width)
+        plt.show()
+
+    #get polygon mask from contour points
+    poly_path = Path(contours)
+    y, x = np.mgrid[:height, :width]
+    coors = np.hstack((x.reshape(-1, 1), y.reshape(-1, 1)))
+    mask = poly_path.contains_points(coors)
+    plt.imshow(mask.reshape(height, width))
+    mask = mask.reshape(height, width)
+    if(visualizebool):
+        plt.ylim(0, img.height)
+        plt.xlim(0, img.width)
+        plt.show()
+    mask = np.array(mask, dtype=np.uint8)
+    #apply mask
+    final = cv2.bitwise_and(imgarr, imgarr, mask=mask)
+    finalvis = final[:, :, ::-1].copy()  # convert from RGB to BGR
+    if(visualizebool):
+        cv2.imshow('Image with Mask', finalvis)
+        cv2.waitKey()
+    return final
 
 def snakesegment(image,visualizebool): #function to segment using the included snake (active contour) algorithm after applying the canny algorithm to find edges
 
@@ -104,9 +177,9 @@ def saturationthreshsegment(image,visualizebool): #assumes that ants possess mor
 ########################
 
 myindex = 'allants4'
-lastAnalyzed = 44194 #Start at 1 for first run. Set to last analyzed for subsequent runs
-visualize = False #set whether to visualize the image transformations
-bulk = False #set whether to index new values one at a time as they are discovered or in bulk once discovery is finished
+lastAnalyzed = 5000 #Start at 1 for first run. Set to last analyzed for subsequent runs
+visualize = True #set whether to visualize the image transformations
+bulk = True #set whether to index new values one at a time as they are discovered or in bulk once discovery is finished
 
 #query specimens from your elasticsearch
 es = Elasticsearch()
@@ -153,7 +226,7 @@ for specimen in dictspecimens:
             if(len(imgarr.shape) == 3):
 
                 start = timer()
-                segmented = snakesegment(image=img,visualizebool=visualize)
+                segmented = scisnakesegment(image=img, visualizebool=visualize)
                 print('Segment time:' + str(timer() - start))
                 allred = []
                 allgreen = []

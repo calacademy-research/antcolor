@@ -3,9 +3,10 @@ library("magrittr", lib.loc="~/R/win-library/3.5")
 
 #get a dataframe of specimens filtered by specific fields and plot variance of specified variable
 
-filtered <- dplyr::filter(colorspecimens, grepl('Aphaenogaster', genus)) #set to desired subset
-filtered = dplyr::filter(filtered, grepl('worker', caste)) #set to desired subset
+#filtered <- dplyr::filter(colorlocated, grepl('Formica', genus)) #set to desired subset
+filtered = dplyr::filter(colorlocated, grepl('worker', caste)) #set to desired subset
 #filtered = dplyr::filter(filtered, grepl('Nearctic', bioregion)) #set to desired subset
+filtered = xoutliers
 
 filtered = filtered[!(is.na(filtered$lightness)), ] #use find and replace to set to desired variable- currently lightness
 View(filtered)

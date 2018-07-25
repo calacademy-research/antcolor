@@ -2,29 +2,32 @@ from PIL import Image
 from elasticsearch import Elasticsearch
 import numpy as np
 import cv2
+from numpy import linalg
 
+#soil, subterranean, - expecting light
+#litter
+#arboreal, above ground, vegetation, canopy
 radius = 3
 #query specimens from your elasticsearch
 es = Elasticsearch()
-r = es.search(index='allants2', doc_type='_doc', body={'from': 0, 'size': 50000, 'query': {"exists" : { "field" : "decimalLatitude", "field" : "lightness"}}})
+r = es.search(index='allants4', doc_type='_doc', body={'from': 0, 'size': 50000, 'query': {"exists" : { "field" : "decimalLatitude", "field" : "lightness"}}})
 # print(r['hits'])
 dictspecimens = r['hits']['hits']
-
 specimenset = []
 #[360][180][3]
 #for every specimen...
 total = 0
 for specimen in dictspecimens:
     # if has RGB and has geo location
-    if((specimen['_source']['decimalLatitude'] != None) and (specimen['_source']['lightness'] != None)):
+    if((specimen['_source']['decimalLatitude'] != None) and (specimen['_source']['lightness'] != None) and ((specimen['_source']['genus'] == 'Pheidole'))):
         lat = specimen['_source']['decimalLatitude']
-        print("Lat: " + str(lat))
+        #print("Lat: " + str(lat))
         latpixel = 90 - int(lat) #pixely = 90-latitude
-        print("LatPix: " + str(latpixel))
+        #print("LatPix: " + str(latpixel))
         lon = specimen['_source']['decimalLongitude']
-        print("Lon: " + str(lon))
+        #print("Lon: " + str(lon))
         lonpixel = lon + 180
-        print("LonPix: " + str(lonpixel))
+        #print("LonPix: " + str(lonpixel))
         red = specimen['_source']['red']
         green = specimen['_source']['green']
         blue = specimen['_source']['blue']
@@ -33,8 +36,7 @@ for specimen in dictspecimens:
 
 mapimg = Image.open('proportionalmap.png')
 maparr = np.array(mapimg)
-print("ECH")
-print(maparr.shape)
+#print(maparr.shape)
 
 x = 0
 y = 0
@@ -44,11 +46,14 @@ for xcoord in maparr: #180
         for spec in specimenset:
             specx = spec[0] #lat pixel
             specy = spec[1] #lon pixel
-            if((abs(x - specy) < radius) and (abs(y - specx) < radius)):
-                specsinradius.append(spec)
-        print(specsinradius)
+            a = np.array([x,y])
+            b = np.array([specx,specy])
+            if((abs(x - specx) <= radius) and (abs(y - specy) <= radius)):
+                if(np.linalg.norm(a-b) <= 3):
+                    specsinradius.append(spec)
+            #if((abs(x - specx) < radius) and (abs(y - specy) < radius)):
+                #specsinradius.append(spec)
         if(len(specsinradius) > 0):
-            print('some in radius')
             totalr = 0
             totalg = 0
             totalb = 0
@@ -64,9 +69,7 @@ for xcoord in maparr: #180
             maparr[x][y][0] = avgb
             maparr[x][y][1] = avgg
             maparr[x][y][2] = avgr
-            print(maparr)
         y+=1
-        print('Y ' + str(y))
     y = 0
     x+=1
     print('X ' + str(x))

@@ -77,4 +77,10 @@ View(locatedspecimens)
 
 colorspecimens <- specimens[!(is.na(specimens$lightness)), ]
 colorlocated <- locatedspecimens[!(is.na(locatedspecimens$lightness)), ]
+
+colortempsolar <- colorlocated[!(is.na(colorlocated$temperature)), ]
+colortempsolar <- colortempsolar[!(is.na(colortempsolar$solar)), ]
+colortempsolar$temperature = as.numeric(as.character(colortempsolar$temperature))
+colortempsolar$solar = as.numeric(as.character(colortempsolar$solar))
+
 rm(specimenlats,specimenlons,coords,r,points,temperature,mean1,solar1,mean2,solar2,solar3,mean3,solar4,mean4,solar5,mean5,solar6,mean6,solar7,mean7,solar8,mean8,solar9,mean9,solar10,mean10,solar11,mean11,solar12,mean12,yearsolar,solar)
