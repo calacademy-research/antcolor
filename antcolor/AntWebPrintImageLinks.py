@@ -8,8 +8,6 @@ r = es.search(index='allants2', doc_type='_doc',
 dictspecimens = r['hits']['hits']
 
 # for every specimen...
-total = 0
-extracted = 0
 for specimen in dictspecimens:
         c = specimen['_source']['specimenCode']
         r = requests.get(

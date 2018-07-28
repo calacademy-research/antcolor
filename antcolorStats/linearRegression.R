@@ -1,15 +1,15 @@
 #run a linear regression on a prepared dataframe
 
-forlinear = locatedspecimens
+forlinear = ranged
 
 #CORRELATION
-cor(forlinear$solar, forlinear$temperature, use = "complete.obs") 
+cor(forlinear$lightness, forlinear$temperature, use = "complete.obs") 
 
 #PLOT: scatter
-plot(forlinear$temperature, forlinear$solar,log="")
+plot(forlinear$temperature, forlinear$lightness,log="")
 
 #reg1 <- lm(lightness~temperature + genus + caste + subfamily,data=forlinear) 
-reg1 <- lm(temperature~solar,data=forlinear) 
+reg1 <- lm(lightness~temperature,data=forlinear) 
 summary(reg1)
 abline(reg1)
 

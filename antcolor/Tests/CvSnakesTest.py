@@ -10,7 +10,7 @@ from skimage import img_as_float
 from PIL import Image
 from PIL import ImageEnhance
 
-img = Image.open('AntImages\head9.jpg')
+img = Image.open('AntImages\head7.jpg')
 contrasted = ImageEnhance.Contrast(img).enhance(2)
 contrastedarr = np.array(contrasted)
 greyscaled = cv2.cvtColor(contrastedarr, cv2.COLOR_BGR2GRAY)
@@ -38,7 +38,7 @@ init = np.array([x, y]).T
 finished = False
 
 while(not finished):
-    snake = active_contour(img, init, alpha=0.15, beta=1, gamma=0.05, w_line=0.1, w_edge=1) #0.005
+    snake = active_contour(img, init, alpha=0.15, beta=1, gamma=0.05, w_line=0.1, w_edge=1)
     print(snake)
     if(len(snake) > 0):
         finished = True
