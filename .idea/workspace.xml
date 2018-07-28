@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e2ac741-a111-4fa1-aceb-38b7b960c985" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/antcolor/AntWebColorQuantifier3.py" beforeDir="false" afterPath="$PROJECT_DIR$/antcolor/AntWebColorQuantifier3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/antcolor/AntWebFindHighValues.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/antcolor/AntWebPrintImageLinks.py" beforeDir="false" afterPath="$PROJECT_DIR$/antcolor/AntWebPrintImageLinks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/antcolor/ClimateColorAnalysis.R" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/antcolor/RGBPointCloud2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/antcolor/Tests/CvSnakesTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/antcolor/Tests/CvSnakesTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/antcolor/kibanacommands.txt" beforeDir="false" afterPath="$PROJECT_DIR$/antcolor/kibanacommands.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/antcolorStats/getinQuartile.R" beforeDir="false" afterPath="$PROJECT_DIR$/antcolorStats/getinQuartile.R" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/antcolorStats/linearMixed.R" beforeDir="false" afterPath="$PROJECT_DIR$/antcolorStats/linearMixed.R" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/antcolorStats/prepareSubsetDataframe.R" beforeDir="false" afterPath="$PROJECT_DIR$/antcolorStats/prepareSubsetDataframe.R" afterDir="false" />
-    </list>
+    <list default="true" id="6e2ac741-a111-4fa1-aceb-38b7b960c985" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,11 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AntWebColorQuantifier3.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AntWebColorQuantifier3.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/antcolor/AntWebColorQuantifier3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            <state relative-caret-position="340">
+              <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -47,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CQSegmentations.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CQSegmentations.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/antcolor/Helpers/CQSegmentations.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
@@ -160,8 +148,8 @@
       <find>SKIPPED</find>
       <find>sortingid</find>
       <find>sci</find>
-      <find>print</find>
       <find>h_2</find>
+      <find>print</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -207,7 +195,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="104" />
+    <option name="x" value="33" />
+    <option name="y" value="18" />
     <option name="width" value="1064" />
     <option name="height" value="1047" />
   </component>
@@ -407,7 +396,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="104" y="0" width="1064" height="1047" extended-state="0" />
+    <frame x="115" y="0" width="1064" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24141221" />
@@ -682,30 +671,10 @@
     <entry file="file://$PROJECT_DIR$/antcolor/proportionalmap.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/antcolor/Helpers/CQColorDefs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="5" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/antcolor/AntWebInferMicrohabitat.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="66" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/antcolor/Helpers/CQSegmentations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="50" column="91" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="91" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -716,12 +685,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/Helpers/CQColorDefs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="5" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/antcolor/AntWebColorQuantifier3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        <state relative-caret-position="340">
+          <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antcolor/Helpers/CQSegmentations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="50" column="91" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="91" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -2,7 +2,11 @@
 
 This project aims to use images and specimen data housed in AntWeb.org to quantify and analyze ant coloration. The open source program Elasticsearch (https://github.com/elastic/elasticsearch) is used to store and handle this data.
 
+![alt text](http://www.antwiki.org/wiki/images/0/0e/Rhytidoponera_metallica_W_head_CAS0172345-web.jpg)
+
 Includes Python scripts to import AntWeb data from the web into Elasticsearch and extract and save color information from specimen images. 
+
+![alt text](http://www.antwiki.org/wiki/images/1/13/Anillomyrma_decamera_casent0179568_head_1.jpg)
 
 Includes R scripts pull ant data from Elasticsearch, use data from the included GIS files with specimens and run various analyses on Elasticsearch ant data. 
 
