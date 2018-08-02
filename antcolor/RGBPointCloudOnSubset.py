@@ -28,7 +28,7 @@ ax = fig.add_subplot(111, projection='3d')
 
 RGBpoints = np.asarray(RGBpoints)
 print(RGBpoints.shape)
-ax.scatter(reds,greens,blues,facecolors=RGBpoints,s=1,marker=',',depthshade= False) #s = size of points
+ax.scatter(reds,greens,blues,facecolors=RGBpoints,s=10,marker=',',depthshade= False) #s = size of points
 plt.title("3D Color Cloud")
 min = 30
 max = 220

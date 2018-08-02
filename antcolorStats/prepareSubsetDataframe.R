@@ -1,24 +1,30 @@
-library("dplr", lib.loc="~/R/win-library/3.5")
+library("dplyr", lib.loc="~/R/win-library/3.5")
 
 #subsets all specimens, taking the average of fields for each term 
 #and storing in a dataframe. 
 
-terms = colorspecimens[!(is.na(colorspecimens$scientificName)), ]
-terms = terms$scientificName
+prepareSubsetDataframe <- function(df, subsetBy, threshold = 3, locatedonly = FALSE) {
+  
+
+col = df[ , colnames(df) == subsetBy]
+terms = df[!(is.na(col)), ]
+terms = terms[ , colnames(terms) == subsetBy]
 terms = terms[!duplicated(terms)]
 
 length(terms)
-View(terms)
+
 subset <- data.frame(Date=as.Date(character()),
                  File=character(), 
                  User=character(), 
                  stringsAsFactors=FALSE) 
-#for every term ie. scientificName
+
+#for every term ie. caste
 for(term in terms)
 {
-  #all specimens of the scientificName
-  members = dplyr::filter(colortempsolar, grepl(term, scientificName))
-  if(nrow(members) >= 3)
+  #all specimens of the caste
+  members = dplyr::filter(df, grepl(term, eval(parse(text= subsetBy))))
+
+  if(nrow(members) >= threshold)
   {
     samplesize = nrow(members)
     
@@ -42,7 +48,6 @@ for(term in terms)
     #meantemp = mean(members$temperature)
     row = cbind(term,samplesize,meanlightness,sdlightness,selightness,meanred,sdred,sered,meangreen,sdgreen,segreen,meanblue,sdblue,seblue)
     subset = rbind(subset,row)
-    subset
   }
 }
 
@@ -67,4 +72,5 @@ subset$seblue = as.numeric(as.character(subset$seblue))
 #subset$meansolar = as.numeric(as.character(subset$meansolar))
 
 dim(subset)
-View(subset)
+return(subset)
+}

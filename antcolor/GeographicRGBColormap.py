@@ -7,7 +7,7 @@ from numpy import linalg
 #soil, subterranean, - expecting light
 #litter
 #arboreal, above ground, vegetation, canopy
-radius = 3
+radius = 2
 #query specimens from your elasticsearch
 es = Elasticsearch()
 r = es.search(index='allants4', doc_type='_doc', body={'from': 0, 'size': 50000, 'query': {"exists" : { "field" : "decimalLatitude", "field" : "lightness"}}})
@@ -19,7 +19,7 @@ specimenset = []
 total = 0
 for specimen in dictspecimens:
     # if has RGB and has geo location
-    if((specimen['_source']['decimalLatitude'] != None) and (specimen['_source']['lightness'] != None) and ((specimen['_source']['genus'] == 'Pheidole'))):
+    if((specimen['_source']['decimalLatitude'] != None) and (specimen['_source']['lightness'] != None)):
         lat = specimen['_source']['decimalLatitude']
         #print("Lat: " + str(lat))
         latpixel = 90 - int(lat) #pixely = 90-latitude

@@ -6,8 +6,7 @@ from elasticsearch import Elasticsearch
 es = Elasticsearch()
 r = es.search(index='allants4', doc_type='_doc', body={'from': 0, 'size': 50000,
                                                        'query': {
-                                                           "exists" : {"field" : "red"},
-                                                            "match" : {"genus" : "Pheidole"}
+                                                           "exists" : {"field" : "red"}
                                                         }
                                                         })
 dictspecimens = r['hits']['hits']

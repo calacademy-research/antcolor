@@ -1,16 +1,23 @@
 
 #removes outliers by genera above q4 + 1.5q or below q1 - 1.5q
 
+outliersbyGenus <- function(df, field){
+
 # list of column names on which to remove outliers
-vars <- c("lightness")
+#vars <- c("lightness")
+vars <- c(field)
 
 # store outliers for removal
 Outliers <- c()
 
 #filter for genus
-terms = colorspecimens[!(is.na(colorspecimens$genus)), ]
+terms = df[!(is.na(df$genus)), ]
 terms = terms$genus
 terms = terms[!duplicated(terms)]
+
+#col = df[ , colnames(df) == field]
+#terms = df[!(is.na(col)), ]
+#terms = terms[ , colnames(terms) == field]
 
 #for every genus
 for(term in terms)
@@ -42,12 +49,14 @@ for(term in terms)
 Outliers <- sort(Outliers)
 
 # Remove the outliers
-xoutliers <- colorspecimens[-Outliers,]
+xoutliers <- df[-Outliers,]
+return(xoutliers)
 
 #plot distribution and IQR of input and with outliers removed
-par(mfrow=c(1, 2))
-plot(density(colorspecimens$lightness), main="", ylab="y", sub=paste("Skewness:", round(e1071::skewness(colorspecimens$lightness), 2)))
-polygon(density(colorspecimens$lightness), col="red")
-plot(density(xoutliers$lightness), main="", ylab="y", sub=paste("Skewness:", round(e1071::skewness(xoutliers$lightness), 2)))
-polygon(density(xoutliers$lightness), col="red")
-boxplot(xoutliers$lightness, main="", sub=paste("Outlier rows: ", boxplot.stats(xoutliers$lightness)$out))
+#par(mfrow=c(1, 2))
+#plot(density(colorspecimens$lightness), main="", ylab="y", sub=paste("Skewness:", round(e1071::skewness(colorspecimens$lightness), 2)))
+#polygon(density(colorspecimens$lightness), col="red")
+#plot(density(xoutliers$lightness), main="", ylab="y", sub=paste("Skewness:", round(e1071::skewness(xoutliers$lightness), 2)))
+#polygon(density(xoutliers$lightness), col="red")
+#boxplot(xoutliers$lightness, main="", sub=paste("Outlier rows: ", boxplot.stats(xoutliers$lightness)$out))
+}

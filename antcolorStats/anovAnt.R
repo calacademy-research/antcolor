@@ -1,6 +1,6 @@
 
 #run an ANOVA on the dataframe
-
-fit <- aov(lightness ~ temperature, data=filtered)
-summary(fit) # display Type I ANOVA table
+anova <- aov(lightness ~ subfamily, data=colorspecimens)
+summary(anova) # display Type I ANOVA table
+TukeyHSD(anova)
 drop1(fit,~.,test="F") # type III SS and F Tests

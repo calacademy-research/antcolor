@@ -3,6 +3,7 @@ import cv2
 import math
 from numba import vectorize, float32
 
+#unfinished modification of Snake using Cuda
 class CudaSnakeObj:
     """ A Snake class for active contour segmentation """
 

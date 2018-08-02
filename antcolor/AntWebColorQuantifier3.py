@@ -16,10 +16,10 @@ from Helpers import CQSegmentations
 #### Before running, use AntWeb2Elastic to index specimens to an index with the mapping specified in kibanacommands.txt
 ################
 
-myindex = 'allants6' #The Elasticsearch index to pull from and index to
-lastAnalyzed = 22925 #Start at 1 for first run. Set to last analyzed for subsequent runs #14000
+myindex = 'allants' #The Elasticsearch index to pull from and index to
+lastAnalyzed = 44281 #Start at 1 for first run. Set to last analyzed for subsequent runs #14000
 size = 10000 #The number of specimens to attempt to query and analyze starting from lastAnalyzed
-visualize = False #set whether to visualize the image transformations
+visualize = True #set whether to visualize the image transformations
 bulk = False #set whether to index new values one at a time as they are discovered or in bulk once discovery is finished
 #shotType = 'H' #H for head, P for profile, D for dorsal
 #imageQuality = 1 #0 for low, 1 for medium, 2 for high
@@ -58,13 +58,21 @@ for specimen in dictspecimens:
     orangenessHSV = None
     brownnessHSV = None
     darkbrownnessHSV = None
-    blacknessHSV = None
+    brownblacknessHSV = None
+    greennessHSV = None
+    lightbluenessHSV = None
+    bluenessHSV = None
+    purplenessHSV = None
     rednessRGB = None
     yellownessRGB = None
     orangenessRGB = None
     brownnessRGB = None
     darkbrownnessRGB = None
-    blacknessRGB = None
+    brownblacknessRGB = None
+    greennessRGB = None
+    lightbluenessRGB = None
+    bluenessRGB = None
+    purplenessRGB = None
     imgUsed = None
 
     #make sure the query produced a valid result
@@ -95,7 +103,7 @@ for specimen in dictspecimens:
             #check for greyscale (SEM images) which cause errors
             if(len(imgarr.shape) == 3):
                 start = timer()
-                segmented = CQSegmentations.scisnakesegment(image=img, visualizebool=visualize)
+                segmented = CQSegmentations.snakesegment(image=img, visualizebool=visualize)
                 print('Segment time:' + str(timer() - start))
                 allred = []
                 allgreen = []
@@ -140,13 +148,22 @@ for specimen in dictspecimens:
                     yellownessHSV = CQColorDefs.hsvdist(huedegrees,saturation,value,60,1,1)
                     brownnessHSV = CQColorDefs.hsvdist(huedegrees,saturation,value,30,1,0.5)
                     darkbrownnessHSV = CQColorDefs.hsvdist(huedegrees,saturation,value,30,1,0.25)
-                    blacknessHSV = CQColorDefs.hsvdist(huedegrees,saturation,value,huedegrees,saturation,0)
+                    brownblacknessHSV = CQColorDefs.hsvdist(huedegrees,saturation,value,huedegrees,saturation,0)
+                    greennessHSV = CQColorDefs.hsvdist(huedegrees,saturation,value,120,1,1)
+                    lightbluenessHSV = CQColorDefs.hsvdist(huedegrees,saturation,value,180,1,1)
+                    bluenessHSV = CQColorDefs.hsvdist(huedegrees,saturation,value,240,1,1)
+                    purplenessHSV = CQColorDefs.hsvdist(huedegrees,saturation,value,270,1,1)
+
                     rednessRGB = CQColorDefs.rgbdist(red, green, blue, 255, 0, 0)
                     orangenessRGB = CQColorDefs.rgbdist(red, green, blue, 255, 127.5, 0)
                     yellownessRGB = CQColorDefs.rgbdist(red, green, blue, 255,255,0)
                     brownnessRGB = CQColorDefs.rgbdist(red, green, blue, 127.5,65.5,0)
                     darkbrownnessRGB = CQColorDefs.rgbdist(red, green, blue, 63.75, 31.88, 0)
-                    blacknessRGB = CQColorDefs.rgbdist(red, green, blue, 0, 0, 0)
+                    brownblacknessRGB = CQColorDefs.rgbdist(red, green, blue, 0, 0, 0)
+                    greennessRGB = CQColorDefs.rgbdist(red, green, blue, 0, 255, 0)
+                    lightbluenessRGB = CQColorDefs.rgbdist(red, green, blue, 0, 255, 255)
+                    bluenessRGB = CQColorDefs.rgbdist(red, green, blue, 0, 0, 255)
+                    purplenessRGB = CQColorDefs.rgbdist(red, green, blue, 127.5, 0, 255)
 
                     extracted+=1
                     total+=1
@@ -169,18 +186,29 @@ for specimen in dictspecimens:
     specimen['_source']['lightness'] = lightness
     specimen['_source']['saturation'] = saturation
     specimen['_source']['value'] = value
+
     specimen['_source']['rednessHSV'] = rednessHSV
     specimen['_source']['yellownessHSV'] = yellownessHSV
     specimen['_source']['orangenessHSV'] = orangenessHSV
     specimen['_source']['brownnessHSV'] = brownnessHSV
     specimen['_source']['darkbrownnessHSV'] = darkbrownnessHSV
-    specimen['_source']['blacknessHSV'] = blacknessHSV
+    specimen['_source']['brownblacknessHSV'] = brownblacknessHSV
+    specimen['_source']['greennessHSV'] = greennessHSV
+    specimen['_source']['lightbluenessHSV'] = lightbluenessHSV
+    specimen['_source']['bluenessHSV'] = bluenessHSV
+    specimen['_source']['purplenessHSV'] = purplenessHSV
+
     specimen['_source']['rednessRGB'] = rednessRGB
     specimen['_source']['yellownessRGB'] = yellownessRGB
     specimen['_source']['orangenessRGB'] = orangenessRGB
     specimen['_source']['brownnessRGB'] = brownnessRGB
     specimen['_source']['darkbrownnessRGB'] = darkbrownnessRGB
-    specimen['_source']['blacknessRGB'] = blacknessRGB
+    specimen['_source']['brownblacknessRGB'] = brownblacknessRGB
+    specimen['_source']['greennessRGB'] = greennessRGB
+    specimen['_source']['lightbluenessRGB'] = lightbluenessRGB
+    specimen['_source']['bluenessRGB'] = bluenessRGB
+    specimen['_source']['purplenessRGB'] = purplenessRGB
+
 
     s = specimen['_source']
     i = specimen['_id']
