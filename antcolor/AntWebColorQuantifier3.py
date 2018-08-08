@@ -17,8 +17,8 @@ from Helpers import CQSegmentations
 ################
 
 myindex = 'allants' #The Elasticsearch index to pull from and index to
-lastAnalyzed = 44281 #Start at 1 for first run. Set to last analyzed for subsequent runs #14000
-size = 10000 #The number of specimens to attempt to query and analyze starting from lastAnalyzed
+lastAnalyzed = 3120 #Start at 1 for first run. Set to last analyzed for subsequent runs #14000
+size = 1 #The number of specimens to attempt to query and analyze starting from lastAnalyzed
 visualize = True #set whether to visualize the image transformations
 bulk = False #set whether to index new values one at a time as they are discovered or in bulk once discovery is finished
 #shotType = 'H' #H for head, P for profile, D for dorsal

@@ -8,5 +8,5 @@ from Helpers import CQSegmentations
 
 
 #get edges with cv2's canny algorithm
-img = Image.open('AntImages\head5.jpg')
+img = Image.open('AntImages\color1.jpg')
 image = CQSegmentations.snakesegment(img,True)

@@ -3,12 +3,13 @@ import requests
 import json
 
 es = Elasticsearch()
-r = es.search(index='allants2', doc_type='_doc',
-              body={"sort": [{"lightness": {"order": "desc"}}, "_score"], 'query': {'match_all': {}}})
+r = es.search(index='allants', doc_type='_doc',
+              body={"sort": [{"lightness": {"order": "desc"}}, "_score"], 'size': 50000, 'query': {'match_all': {}}})
 dictspecimens = r['hits']['hits']
 
 # for every specimen...
 for specimen in dictspecimens:
+    if(specimen['_source']['genus'] == 'Iridomyrmex'):
         c = specimen['_source']['specimenCode']
         r = requests.get(
             'http://api.antweb.org/v3.1/images?shotType=H&specimenCode=' + c)  # adjust shotType as preferred
