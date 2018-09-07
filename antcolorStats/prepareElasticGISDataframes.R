@@ -105,7 +105,7 @@ mean12 = raster("Included_Databases/wc2.0_5m_srad_12.tif")
 mean12 = mean12[[c(1)]]
 solar12 = extract(mean12,points)
 yearsolar = cbind(solar1,solar2,solar3,solar4,solar5,solar6,solar7,solar8,solar9,solar10,solar11,solar12)
-solar = rowMeans(yearsolar)
+solar <<- rowMeans(yearsolar)
 
 locatedspecimens <- cbind(locatedspecimens,solar)
 

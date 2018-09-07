@@ -1,6 +1,6 @@
 
-#run a linear mixed model on a dataframe
-mixed.lmer = lmer(lightness ~ temperature + solar + (1|bioregion/region/country), data = colorlocated)
+#run a linear mixed model on a dataframe using lme4
+mixed.lmer = lmer(lightness ~ temperature + solar + (1|bioregion/region/country), data = colorlocated1)
 
 #(1|bioregion/region/country)
 summary(mixed.lmer)

@@ -1,10 +1,10 @@
 
 # PCA with function prcomp
 
-df <- dplyr::select_if(colorlocated, is.numeric)
+df <- dplyr::select_if(colorlocated1, is.numeric)
 df= df[complete.cases(df), ]
 
-pca1 = prcomp(df, scale. = TRUE)
+pca1 = prcomp(df, scale = TRUE)
 
 # sqrt of eigenvalues
 pca1$sdev
