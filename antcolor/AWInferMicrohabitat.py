@@ -1,5 +1,9 @@
 from elasticsearch import Elasticsearch
 
+####################
+#### AWInferMicrohabitat uses the specified strings to infer the microhabitats of ants.
+################
+
 #query specimens from your elasticsearch
 es = Elasticsearch()
 r = es.search(index='allants6', doc_type='_doc', body={'from': 0, 'size': 50000, 'query': {"exists" : { "field" : "microhabitat"}}})
@@ -23,7 +27,8 @@ for specimen in dictspecimens:
         specimen['_source']['microhabitatInferred'] = 'ground'
         print("ground")
     #CATEGORY 4- arboreal microhabitat
-    elif (('on tree' in string) or ('above ground' in string) or ('in tree' in string) or ('stem' in string) or ('sapling' in string) or ('low vegetation' in string) or  ('beating' in string) or ('trunk' in string and not('fallen' in string))):
+    elif (('on tree' in string) or ('above ground' in string) or ('in tree' in string) or ('stem' in string) or
+          ('sapling' in string) or ('low vegetation' in string) or  ('beating' in string) or ('trunk' in string and not('fallen' in string))):
         specimen['_source']['microhabitatInferred'] = 'arboreal'
         print("arboreal")
 

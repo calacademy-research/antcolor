@@ -11,6 +11,9 @@ Includes R scripts pull ant data from Elasticsearch, use data from the included 
 Outstanding questions include: 
 1. What is extent of variation in ant color? 
 2. How does color in ants vary with latitude, temperature, elevation, UV-B radiation exposure and other linear environmental parameters? 
-3. Is ant color at all related to habitat or microhabitat, and if so why? 
+3. How does ant color vary across ant castes and does caste-based color variation vary across genera?
+3. Is ant color at all related to habitat or microhabitat?
 4. To what extent is color conserved across clades and/or genera? 
 5. Ultimately, can these explanatory factors be effectively quantified using a model? 
+
+The first published paper of the project, relating to question 3, is currently in the works!

@@ -165,10 +165,6 @@ reg <- lm(sdbrownness ~ sdtemp,data=forlinear)
 summary(reg)
 abline(reg)
 
-#Run some LMMs
-
-#Run some PCAs 
-
 #Genus level comparisons
 colorlocated1cremat <- dplyr::filter(colorlocated1, grepl('Crematogaster', genus)) #set to desired field and value
 colorlocated1tetraMG <- dplyr::filter(colorlocated1tetra, grepl('Malagasy', bioregion)) #set to desired field and value

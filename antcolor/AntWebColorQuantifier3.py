@@ -12,13 +12,13 @@ from Helpers import CQColorDefs
 from Helpers import CQSegmentations
 
 ####################
-#### AntWebColorQuantifier4 extracts and stores color data from AntWeb specimen images stored in Elasticsearch.
+#### AntWebColorQuantifier extracts and stores color data from AntWeb specimen images stored in Elasticsearch.
 #### Before running, use AntWeb2Elastic to index specimens to an index with the mapping specified in kibanacommands.txt
 ################
 
 myindex = 'allants' #The Elasticsearch index to pull from and index to
-lastAnalyzed = 3120 #Start at 1 for first run. Set to last analyzed for subsequent runs #14000
-size = 1 #The number of specimens to attempt to query and analyze starting from lastAnalyzed
+lastAnalyzed = 3120 #Start at 1 for first run. Set to last analyzed for subsequent runs
+size = 5 #The number of specimens to attempt to query and analyze starting from lastAnalyzed
 visualize = True #set whether to visualize the image transformations
 bulk = False #set whether to index new values one at a time as they are discovered or in bulk once discovery is finished
 #shotType = 'H' #H for head, P for profile, D for dorsal
@@ -108,12 +108,21 @@ for specimen in dictspecimens:
                 allred = []
                 allgreen = []
                 allblue = []
+                pixelhsv = None
+                allhue = []
+                allsat = []
+                allval = []
                 for row in segmented:
                     for pixel in row:
                         if(pixel[0] != 0):
                                 allred.append(pixel[0])
                                 allgreen.append(pixel[1])
                                 allblue.append(pixel[2])
+                                pixelhsv = colorsys.rgb_to_hsv(pixel[0], pixel[1], pixel[2])
+                                allhue.append(pixelhsv[0])
+                                allsat.append(pixelhsv[1])
+                                allval.append(pixelhsv[2])
+
 
                 #deal with collapsing snake due to random loaves of bread
                 if(len(allred) != 0):
@@ -125,7 +134,11 @@ for specimen in dictspecimens:
                     avgred = sum(allred) / float(len(allred))
                     avggreen = sum(allgreen) / float(len(allgreen)) #RGB values- the amount of red, green, and blue needed to create the color
                     avgblue = sum(allblue) / float(len(allblue))
+                    avghue = sum(allhue) / float(len(allhue))
+                    avgsat = sum(allsat) / float(len(allsat))
+                    avgval = sum(allval) / float(len(allval))
                     print('^^^ ' + 'RGB(' + str(avgred) + ',' + str(avggreen) + ',' + str(avgblue) + ')' + ' ^^^') #prints RGB result from above image link
+                    print('^^^ ' + 'HSV(' + str(avghue) + ',' + str(avgsat) + ',' + str(avgval) + ')' + ' ^^^')
                     avghls = colorsys.rgb_to_hls(avgred / 255.0, avggreen / 255.0, avgblue / 255.0)
                     avghsv = colorsys.rgb_to_hsv(avgred / 255.0, avggreen / 255.0, avgblue / 255.0)
                     #avgcmyk = rgb_to_cmyk(avgred,avggreen,avgblue)

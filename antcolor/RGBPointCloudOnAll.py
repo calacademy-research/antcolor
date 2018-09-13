@@ -3,6 +3,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 from elasticsearch import Elasticsearch
 
+####################
+#### Each RGBPointCloud function displays a 3D plot of specimen colors in the RGB colorspace. Use OnAll to make all dots
+#### specimens or OnSubset to make dots categories like castes or genera. VariedMarkers allows the plotting of different
+####  subsets with different markers
+################
+
 es = Elasticsearch()
 r = es.search(index='allants4', doc_type='_doc', body={'from': 0, 'size': 50000,
                                                        'query': {

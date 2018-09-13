@@ -4,9 +4,11 @@ import numpy as np
 import cv2
 from numpy import linalg
 
-#soil, subterranean, - expecting light
-#litter
-#arboreal, above ground, vegetation, canopy
+####################
+#### GeographicRGBColormap produces a color distribution map by shading each pixel of latitude and longitude by the average of specimen colors
+#### within the specified radius of the pixel. Takes a few minutes to run!
+################
+
 radius = 2
 #query specimens from your elasticsearch
 es = Elasticsearch()
@@ -14,7 +16,7 @@ r = es.search(index='allants4', doc_type='_doc', body={'from': 0, 'size': 50000,
 # print(r['hits'])
 dictspecimens = r['hits']['hits']
 specimenset = []
-#[360][180][3]
+
 #for every specimen...
 total = 0
 for specimen in dictspecimens:
