@@ -2,7 +2,7 @@ import numpy as np
 import math
 
 ####################
-#### CQColorDefs includes defs for calculating the distance between colors and additional conversions between spaces
+#### CQColorDefs includes functions for calculating the distance between color triplets and additional conversions between spaces
 ################
 
 #r1 is the ant color, r2 is the color to find the distance from
@@ -16,7 +16,7 @@ def rgbdist(r1, g1, b1, r2, g2, b2):
 
 #accepts hues h1 and h2 as degrees 0-360
 #distance of 60 degrees of hue = 1 = distance from white/black
-def hsvdist(h1,s1,v1,h2,s2,v2):
+def hsvhsldist(h1,s1,v1,h2,s2,v2):
     dh = abs(h1 - h2) / 60
     ds = abs(s1 - s2)
     dv = abs(v1 - v2)
@@ -26,7 +26,7 @@ def hsvdist(h1,s1,v1,h2,s2,v2):
     dist = -(dist) + 1
     return dist
 
-#defs to convert between CMYK and RGB
+#convert between CMYK and RGB
 rgb_scale = 255
 cmyk_scale = 100
 def rgb_to_cmyk(r,g,b):
@@ -49,7 +49,7 @@ def rgb_to_cmyk(r,g,b):
     # rescale to the range [0,cmyk_scale]
     return c*cmyk_scale, m*cmyk_scale, y*cmyk_scale, k*cmyk_scale
 
-#WIP Matlab conversion for estimating spectra from RGB coordinates
+#WIP unfinished Matlab conversion for estimating spectra from RGB coordinates
 def ILSS(B11=None, B12=None, sRGB=None):
     # This is the Iterative Least Slope Squared (ILSS) algorithm for generating
     # a "reasonable" reflectance curve from a given sRGB color triplet.

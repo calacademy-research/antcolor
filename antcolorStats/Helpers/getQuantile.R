@@ -1,9 +1,9 @@
 
 #get subset above and below the specified quantile (qval)
 
-getQuantile <- function(column, qval, under) {
+getQuantile <- function(df, column, qval, under) {
 
-q = quantile(column, qval)
+q = quantile(column, qval,na.rm = TRUE)
 
 if(under){
 inquantile = df[column < q, ] 

@@ -5,35 +5,35 @@ import numpy as np
 import matplotlib.pyplot as plt
 from Helpers import SnakeMain
 from matplotlib.path import Path
-from skimage.segmentation import active_contour
-from skimage import img_as_float
+#from skimage.segmentation import active_contour
+#from skimage import img_as_float
 
 ####################
-#### ColorQuantifierSegmentations includes defs for segmenting ants from images
+#### ColorQuantifierSegmentations includes functions for segmenting ants from images - current
 ################
 
-def scisnakesegment(image,visualizebool): #function to segment using the faster and more reliable SKIMAGE snake (active contour) algorithm after applying the canny algorithm to find edges
+def scisnakesegment(image,visAll,visEnd): #function to segment using the SKIMAGE snake (active contour) algorithm after applying the canny algorithm to find edges
 
     #get edges with cv2's canny algorithm
     img = image
     imgarr = np.array(img)
-    if(visualizebool):
+    if(visAll):
         imgvis = imgarr[:, :, ::-1].copy()  # convert from RGB to BGR
         cv2.imshow('Input Image',imgvis)
         cv2.waitKey()
     contrasted = ImageEnhance.Contrast(img).enhance(2)
     contrastedarr = np.array(contrasted)
     contrastedarr = contrastedarr[:, :, ::-1].copy()  # convert from RGB to BGR
-    if(visualizebool):
+    if(visAll):
         cv2.imshow('Contrasted Image', contrastedarr)
         cv2.waitKey()
     greyscaled = cv2.cvtColor(contrastedarr, cv2.COLOR_BGR2GRAY)
     filtered = cv2.bilateralFilter(greyscaled, 6, 50, 50)
-    if (visualizebool):
+    if (visAll):
         cv2.imshow('Bilaterally Filtered Image', contrastedarr)
         cv2.waitKey()
     edged = cv2.Canny(filtered, 125, 250) #100, 225
-    if(visualizebool):
+    if(visAll):
         cv2.imshow('Image Edges with Canny', edged)
         cv2.waitKey()
 
@@ -56,7 +56,7 @@ def scisnakesegment(image,visualizebool): #function to segment using the faster 
     height = img.height
 
     #visualize contour points
-    if(visualizebool):
+    if(visAll):
         x, y = contours.T
         plt.scatter(x, y)
         plt.ylim(0, height)
@@ -70,7 +70,7 @@ def scisnakesegment(image,visualizebool): #function to segment using the faster 
     mask = poly_path.contains_points(coors)
     plt.imshow(mask.reshape(height, width))
     mask = mask.reshape(height, width)
-    if(visualizebool):
+    if(visAll):
         plt.ylim(0, img.height)
         plt.xlim(0, img.width)
         plt.show()
@@ -78,39 +78,39 @@ def scisnakesegment(image,visualizebool): #function to segment using the faster 
     #apply mask
     final = cv2.bitwise_and(imgarr, imgarr, mask=mask)
     finalvis = final[:, :, ::-1].copy()  # convert from RGB to BGR
-    if(visualizebool):
+    if(visAll or visEnd):
         cv2.imshow('Image with Mask', finalvis)
         cv2.waitKey()
     return final
 
-def snakesegment(image,visualizebool): #function to segment using the included snake (active contour) algorithm after applying the canny algorithm to find edges
+def snakesegment(image,visAll,visEnd,saveOutput,outputName): #function to segment using the included snake (active contour) algorithm after applying the canny algorithm to find edges
 
     #get edges with cv2's canny algorithm
     img = image
     imgarr = np.array(img)
-    if(visualizebool):
+    if(visAll):
         imgvis = imgarr[:, :, ::-1].copy()  # convert from RGB to BGR
         cv2.imshow('Input Image',imgvis)
         cv2.waitKey()
     contrasted = ImageEnhance.Contrast(img).enhance(2)
     contrastedarr = np.array(contrasted)
     contrastedarr = contrastedarr[:, :, ::-1].copy()  # convert from RGB to BGR
-    if(visualizebool):
+    if(visAll):
         cv2.imshow('Contrasted Image', contrastedarr)
         cv2.waitKey()
     greyscaled = cv2.cvtColor(contrastedarr, cv2.COLOR_BGR2GRAY)
     filtered = cv2.bilateralFilter(greyscaled, 6, 50, 50)
-    if (visualizebool):
+    if (visAll):
         cv2.imshow('Bilaterally Filtered Image', contrastedarr)
         cv2.waitKey()
     edged = cv2.Canny(filtered, 125, 250) #100, 225
-    if(visualizebool):
+    if(visAll):
         cv2.imshow('Image Edges with Canny', edged)
         cv2.waitKey()
 
     #apply included snake algorithm
     snakecharmer = SnakeMain.SnakeMain()
-    snakecharmer.load_image(file_to_load=edged,visualizebool=visualizebool)
+    snakecharmer.load_image(file_to_load=edged,visualizebool=visAll)
 
     # while specified number of iterations not completed...
     while(snakecharmer.progress < 10):
@@ -124,7 +124,7 @@ def snakesegment(image,visualizebool): #function to segment using the included s
     height = img.height
 
     #visualize contour points
-    if(visualizebool):
+    if(visAll):
         x, y = contours.T
         plt.scatter(x, y)
         plt.ylim(0, height)
@@ -138,20 +138,27 @@ def snakesegment(image,visualizebool): #function to segment using the included s
     mask = poly_path.contains_points(coors)
     plt.imshow(mask.reshape(height, width))
     mask = mask.reshape(height, width)
-    if(visualizebool):
+    if(visAll):
         plt.ylim(0, img.height)
         plt.xlim(0, img.width)
         plt.show()
     mask = np.array(mask, dtype=np.uint8)
     #apply mask
     final = cv2.bitwise_and(imgarr, imgarr, mask=mask)
+    #save output if true
+    if(saveOutput):
+        im = Image.fromarray(final)
+        #outputFixed = outputName.replace('/','-')
+        #outputFixed = outputFixed.replace(':', '+')
+        im.save('S:/GitProjects/antcolor/antcolor/Output/SegTest/' + outputName + '.jpg',format='JPEG')
+        #final.save('S:/GitProjects/antcolor/antcolor/Output/SegTest' + outputName + '.jpg', 'JPEG')
     finalvis = final[:, :, ::-1].copy()  # convert from RGB to BGR
-    if(visualizebool):
+    if(visAll or visEnd):
         cv2.imshow('Image with Mask', finalvis)
         cv2.waitKey()
     return final
 
-def saturationthreshsegment(image,visualizebool): #assumes that ants possess more HSV saturation than the background and segments based on a saturation threshold - pretty bad
+def saturationthreshsegment(image,visualizebool): #assumes that ants possess more HSV saturation than the background and segments based on a saturation threshold - works poorly on dark or light ants
     imgarr = np.asarray(image)
     hsv_img = cv2.cvtColor(imgarr, cv2.COLOR_BGR2HSV)
     lowrange = [0, 150, 0]

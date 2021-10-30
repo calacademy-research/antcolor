@@ -1,7 +1,7 @@
 from elasticsearch import Elasticsearch
 
 ####################
-#### AWInferMicrohabitat uses the specified strings to infer the microhabitats of ants.
+#### AWInferMicrohabitat searches for the specified strings in the microhabitat variable to infer the microhabitats of ants.
 ################
 
 #query specimens from your elasticsearch
@@ -15,11 +15,11 @@ for specimen in dictspecimens:
     string = str(specimen['_source']['microhabitat'])
 
     #CATEGORY 1- underground microhabitat
-    if(('in ground' in string) or ('soil' in string)):
-        specimen['_source']['microhabitatInferred'] = 'underground'
-        print("underground")
-    #CATEGORY 2- litter microhabitat
-    elif (('litter' in string)):
+    #if(('in ground' in string) or ('soil' in string)):
+    #    specimen['_source']['microhabitatInferred'] = 'underground'
+    #    print("underground")
+    #CATEGORY 1- litter microhabitat
+    if (('litter' in string)):
         specimen['_source']['microhabitatInferred'] = 'litter'
         print("litter")
     #CATEGORY 3- ground foraging
